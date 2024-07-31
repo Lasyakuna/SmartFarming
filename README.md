@@ -1,16 +1,16 @@
-The traditional agricultural practices in India are increasingly challenged by the
-unpredictable impacts of climate change, with erratic weather patterns and fluctuating soil
-conditions disrupting crop cycles, especially during the winter crop season (Rabi).
+The product uses machine learning models to predict crop yields from environmental
+data. Data from 'Crop_recommendation.csv' is preprocessed in Pandas, handling missing values
+and splitting into training/testing sets via stratified sampling.
 
-Farmers face difficulties in planning and managing crops due to sudden weather
-changes, unseasonal rainfall, and extended drought periods, which threaten food security
-and agricultural livelihoods.
+Four classifiers Logistic Regression, Decision Tree, Naive Bayes, and Random Forest are trained, with Random Forest
+chosen for deployment due to superior accuracy. 
 
-This project proposes a data analytics system to address these challenges by
-leveraging extensive agricultural data and advanced machine learning algorithms. By
-uncovering hidden patterns and providing actionable insights, the system aims to help
-farmers make informed decisions on crop selection, irrigation, and pest management.
+The model is serialized using joblib/pickle for
+efficiency. A Flask web app fetches real-time weather (temperature, humidity, rainfall) via APIs
+and IP geolocation. User-inputted soil parameters (Nitrogen, Phosphorus, Potassium, pH) are
+processed to predict suitable crops, displayed on the frontend. Error handling ensures smooth
+user interaction. 
 
-Integrating real-time weather data and historical climate trends, the system
-enhances predictive capabilities, promoting proactive and sustainable agricultural
-practices that improve resilience and productivity in the face of climate uncertainties
+The modular design supports scalability and future enhancements for evolving
+agricultural needs.
+
