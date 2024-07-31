@@ -1,0 +1,25 @@
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIjEdmBcsDcRLYwyJmY8aZ6ukY62qmssp7jA&s');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: black;
+    font-family: Arial, sans-serif;
+    /* text-shadow: 2px 2px #333; */
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .right-aligned {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 90px;
+}
+h2{
+  text-align: center;
+}
+  

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ML for Crop Recommendation</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/myhome.css')}}">
+  </head>
+  <body>
+    <main>
+      <br><br><br>
+      <h1>Smart Farming<br>&nbsp;&nbsp;Machine Learning Approaches to Crop Recommendation</h1><br>
+      <p style="color: black;">Greetings, Agricultural Hero,We hope your farming endeavors are thriving.<br>
+        We are excited to offer you smart and efficient crop recommendations tailored to your soil's unique characteristics.<br> 
+        By considering various parameters, we can help you choose the best crops to maximize your yield and profitability. <br>
+        Let's make your farming journey even more successful!</p>
+      <br>
+      <!-- <h3 style="color: black;">Let's Start New Journey With ML Driven Crop Recommendation</h3> -->
+      <h2 style="color: black;">Click following button for Crop recommandation</h2>
+    </main>
+     <form action="/Predict">
+      <input type="submit" id="Predict" name="Predict" action="/Predict" value="Predict">
+     </form>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/fe/52/d0/fe52d0e3c1d9e6fad58f1854d4b66d99.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  form {
+    width: 500px;
+    margin: 110px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(160, 241, 156, 0.377);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: center; 
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+  }
+
+   /* Container for the two columns */
+   .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+/* Left column (form) */
+.form-container {
+    flex: 1;
+    margin-right: 20px; /* Space between form and other parameters */
+}
+
+label, input {
+    margin-bottom: 10px; /* Adds space between elements */
+}
+/* Right column (other parameters) */
+.other-parameters {
+    flex: 1;
+}
+p {
+  font-size: 22px;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid rgb(0, 250, 255);
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black; /* Text color */
+  background-color: aqua; /* Button background color */
+  transition: background 0.5s, color 0.5s;
+}
+
+.btn:hover {
+  background: whitesmoke; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}

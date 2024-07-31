@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML for Crop Recommendation</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/first.css')}}">
+    <script>
+        function validateForm() {
+            let nitrogen = document.forms["cropForm"]["Nitrogen"].value;
+            let phosphorus = document.forms["cropForm"]["Phosphorus"].value;
+            let potassium = document.forms["cropForm"]["Potassium"].value;
+            let ph = document.forms["cropForm"]["ph"].value;
+
+            if (nitrogen == "" || phosphorus == "" || potassium == "" || ph == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            nitrogen = parseFloat(nitrogen);
+            phosphorus = parseFloat(phosphorus);
+            potassium = parseFloat(potassium);
+            ph = parseFloat(ph);
+
+            if (isNaN(nitrogen) || isNaN(phosphorus) || isNaN(potassium) || isNaN(ph)) {
+                alert("Please enter valid numbers");
+                return false;
+            }
+
+            if (ph <= 0 || ph > 14) {
+                alert("pH value must be between 0 and 14");
+                return false;
+            }
+
+            return true;
+            // if(typeof nitrogen!='number'||typeof phosphorus!='number'||typeof potassium!='number'){
+            //     alert("Input valid number ");
+            // }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form name="cropForm" action="form" method="post" onsubmit="return validateForm()">
+              <h3><b>SOIL NUTRIENT ANALYSIS</b></h3>
+                <label for="Nitrogen">Nitrogen:</label>
+                <input type="text" id="Nitrogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
+
+                <label for="Phosphorus">Phosphorus:</label>
+                <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
+
+                <label for="Potassium">Potassium:</label>
+                <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
+
+                <label for="ph">pH:</label>
+                <input type="text" id="ph" name="ph" min="0" max="14" placeholder="ph should be in between 0-14" required>
+
+                <input style="font-size: 18px;" type="submit" id="submit" name="submit" value="Predict Your Crop">
+            </form>
+        </div>
+        <div class="other-parameters">
+          <br><br><br><br><br><br><br>
+            <h1>Location:</h1>
+            <p><b>City:</b> {{ city }} </p>
+            <p><b>State:</b> {{ state}} </p>
+            <h1>Current Weather Conditions:</h1>
+            <p ><b>Temperature:</b> {{ temperature }}°C</p>
+            <p><b>Humidity:</b> {{ humidity }}%</p>
+            <p><b>Rainfall:</b> {{ rainfall }} mm</p>
+            <h1>Refer to the document for nutrient composition of different soil types.</h1><a href="https://drive.google.com/file/d/1QaCCujfWw0YA_ajS1Yw8exeyNwyBl4mD/view?usp=sharing" download class="btn btn2"> Download</a>
+        </div>
+    </div>
+</body>
+</html>

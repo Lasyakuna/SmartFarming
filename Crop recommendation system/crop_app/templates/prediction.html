@@ -1,0 +1,258 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/prdiction_css.css')}}">
+</head>
+<body>
+    <div>
+        <h4 style="text-align: center;">For the given input parameters, a recommended crop is: </h4>
+        <h4>
+            {% if prediction == "rice" %}
+                <h2>RICE</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfYGY4LO3Fv8A8CGFaKsx2YlFnZEclAd9hZQ&s" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Farmyard manure (FYM), compost</li>
+                        <li>Bio-pesticides: Neem oil, Bacillus thuringiensis (Bt)</li>
+                        <li>Nutrients: N: 100-150 kg/ha, P: 50-60 kg/ha, K: 50-60 kg/ha, Zinc (Zn)</li>
+                        <li>Duration: 4-5 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "maize" %}
+                <h2>MAIZE</h2><br>
+                <img src="https://apseeds.ap.gov.in/Assets/Images/maize.jpeg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Trichoderma, neem oil</li>
+                        <li>Nutrients: N: 120-180 kg/ha, P: 60-80 kg/ha, K: 40-60 kg/ha, Sulfur (S)</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "jute" %}
+                <h2>JUTE</h2><br>
+                <img src="https://img.freepik.com/premium-photo/green-jute-plantation-field-raw-jute-plant-texture-background_656518-197.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, green manure</li>
+                        <li>Bio-pesticides: Neem-based products, Bt</li>
+                        <li>Nutrients: N: 40-80 kg/ha, P: 20-40 kg/ha, K: 40-80 kg/ha, Calcium (Ca)</li>
+                        <li>Duration: 4-5 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "cotton" %}
+                <h2>COTTON</h2><br>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/037/996/577/small_2x/ai-generated-cotton-flower-branch-on-nature-photo.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, compost</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 80-120 kg/ha, P: 40-60 kg/ha, K: 40-60 kg/ha, Magnesium (Mg)</li>
+                        <li>Duration: 6-8 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "coconut" %}
+                <h2>COCONUT</h2><br>
+                <img src="https://kj1bcdn.b-cdn.net/media/61498/coconut-farm.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem cake, Trichoderma</li>
+                        <li>Nutrients: N: 500 g/tree/year, P: 320 g/tree/year, K: 1200 g/tree/year, Boron (B)</li>
+                        <li>Duration: 6-10 years (first yield), then annually</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "papaya" %}
+                <h2>PAPAYA</h2><br>
+                <img src="https://plantix.net/en/library/assets/custom/crop-images/papaya.jpeg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, vermicompost</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 200-250 g/plant/year, P: 200-250 g/plant/year, K: 400-500 g/plant/year, Magnesium (Mg)</li>
+                        <li>Duration: 9-11 months (first yield)</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "orange" %}
+                <h2>ORANGE</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5n1zt2jW-PLgWEFwbv2Xyg9rDysyF6BmK1A&s" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, compost</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 400-500 g/tree/year, P: 150-200 g/tree/year, K: 300-400 g/tree/year, Zinc (Zn)</li>
+                        <li>Duration: 8-12 months (flowering to harvest)</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "apple" %}
+                <h2>APPLE</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5n1zt2jW-PLgWEFwbv2Xyg9rDysyF6BmK1A&s" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 500-600 g/tree/year, P: 200-250 g/tree/year, K: 300-400 g/tree/year, Calcium (Ca)</li>
+                        <li>Duration: 5-6 years (first yield), then annually</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "muskmelon" %}
+                <h2>MUSKMELON</h2><br>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/368706975/VW/JZ/XX/107288566/super-777-hybrid-muskmelon-seeds-500x500.jpeg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 80-100 kg/ha, P: 40-50 kg/ha, K: 60-80 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "watermelon" %}
+                <h2>WATERMELON</h2><br>
+                <img src="https://images.pexels.com/photos/13740622/pexels-photo-13740622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 80-100 kg/ha, P: 40-50 kg/ha, K: 60-80 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "grapes" %}
+                <h2>GRAPES</h2><br>
+                <img src="https://agriculture.basf.us/content/dam/cxm/agriculture/crop-protection/use-areas/crops/images/CRP160087_Solutions_Grape_Inset.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, compost</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 60-80 kg/ha, P: 40-50 kg/ha, K: 80-100 kg/ha, Magnesium (Mg)</li>
+                        <li>Duration: 2-3 years (first yield), then annually</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "mango" %}
+                <h2>MANGO</h2><br>
+                <img src="https://nurserylive.com/cdn/shop/products/nurserylive-mango-tree-kesar-grafted-plant_600x600.jpg?v=1634223741" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, compost</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 500-700 g/tree/year, P: 200-300 g/tree/year, K: 500-700 g/tree/year, Zinc (Zn)</li>
+                        <li>Duration: 5-8 years (first yield), then annually</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "banana" %}
+                <h2>BANANA</h2><br>
+                <img src="https://cdn.pixabay.com/photo/2014/07/29/13/18/bananas-404536_640.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 200-300 g/plant/year, P: 100-150 g/plant/year, K: 300-400 g/plant/year, Magnesium (Mg)</li>
+                        <li>Duration: 9-12 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "pomogranate" %}
+                <h2>POMOGRANATE</h2><br>
+                <img src="https://agricultureguruji.com/wp-content/uploads/2018/10/pomo.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: FYM, compost</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 200-250 g/tree/year, P: 50-100 g/tree/year, K: 200-250 g/tree/year, Calcium (Ca)</li>
+                        <li>Duration: 6-7 months (first yield)</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "lentil" %}
+                <h2>LENTIL</h2><br>
+                <img src="https://media.sciencephoto.com/image/e7700917/800wm/E7700917-Lentil_crop.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-30 kg/ha, K: 20-30 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "blackgram" %}
+                <h2>BLACKGRAM</h2><br>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/345352661/CX/MQ/QZ/77866071/black-gram-seeds-vbn8-500x500.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-30 kg/ha, K: 20-30 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "mungbean" %}
+                <h2>MUNGBEAN</h2><br>
+                <img src="https://i0.wp.com/alseed.com/wp-content/uploads/2022/01/Mung-Bean-Stock-Image-scaled-e1641503823506.jpeg?fit=1708%2C1707&ssl=1" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-30 kg/ha, K: 20-30 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "mothbeans" %}
+                <h2>MOTHBEANS</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9L9wFo6UwrIgY9xehOZwQtIFFcjzfHoSDbw&s" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-30 kg/ha, K: 20-30 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "pigeonpeas" %}
+                <h2>PIGEONPEAS</h2><br>
+                <img src="https://www.apnikheti.com/upload/crops/2367idea99pigeon.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-30 kg/ha, K: 20-30 kg/ha</li>
+                        <li>Duration: 5-7 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "kidneybeans" %}
+                <h2>KIDNEYBEANS</h2><br>
+                <img src="https://t4.ftcdn.net/jpg/05/49/55/15/360_F_549551576_U5hntyhd0UWwAdVS1btumFTN6E9xwXQj.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 40-60 kg/ha, P: 40-60 kg/ha, K: 40-60 kg/ha</li>
+                        <li>Duration: 3-4 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "chickpea" %}
+                <h2>CHICKPEA</h2><br>
+                <img src="https://plantic.in/image/blog/chickpeas2.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Bt</li>
+                        <li>Nutrients: N: 20-40 kg/ha, P: 20-40 kg/ha, K: 20-40 kg/ha</li>
+                        <li>Duration: 4-5 months</li>
+                    </ul>
+                </h5>
+            {% elif prediction == "coffee" %}
+                <h2>COFFEE</h2><br>
+                <img src="https://www.bcncoffeeguide.com/wp-content/uploads/2020/05/barcelona-coffee-guide-coffee-in-plantation.jpg" width=300 height=300 alt="Feature 1" class="right-aligned">
+                <h5>
+                    <ul>
+                        <li>Manure: Compost, FYM</li>
+                        <li>Bio-pesticides: Neem oil, Trichoderma</li>
+                        <li>Nutrients: N: 100-200 kg/ha, P: 100-200 kg/ha, K: 200-300 kg/ha, Magnesium (Mg)</li>
+                        <li>Duration: 3-4 years (first yield), then annually</li>
+                    </ul>
+                </h5>
+            {% else %}
+                No crop can be grown in this area.
+            {% endif %}
+        </h4>
+        <br>
+    </div>
+</body>
+</html>
