@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crop-Recommendation-system-
 ## Introduction:
 
@@ -21,3 +22,6 @@ The Crop Recommendation System represents the pinnacle of data-driven agricultur
 ![croppp](https://github.com/Sanket4545/Crop-Recommendation-system-/assets/103092841/a4fb2eaa-e9b8-409a-97a6-25b1e9e8456a)
 
 ![cropp](https://github.com/Sanket4545/Crop-Recommendation-system-/assets/103092841/aa89468f-5622-4388-806d-1c6e6c164315)
+=======
+# SmartFarming
+>>>>>>> ee375f4b7fb24695fe434cdb524758d186159521
